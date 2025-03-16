@@ -1,4 +1,4 @@
-const socket = io("https://sharefile-213g.onrender.com/"); // Connect to the signaling server
+const socket = io("https://sharefile-213g.onrender.com:10000"); // Connect to the signaling server
 
 const peer = new RTCPeerConnection();
 let dataChannel;
