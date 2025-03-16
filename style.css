@@ -1,0 +1,37 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+	overflow-y: hidden;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.shadow{
+    box-shadow: rgb(28, 41, 56) 0px 20px 30px -10px;
+}
+
+.file-received {
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    border-radius: 8px;
+}
+
+  
+  

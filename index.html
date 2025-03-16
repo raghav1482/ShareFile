@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css"/>
+    <title>WebRTC File Sharing</title>
+</head>
+<body>
+    <!-- Phone Container -->
+    <div class="relative w-[300px] h-[600px] bg-black rounded-[50px] border-[6px] border-gray-800 flex items-center justify-center mx-auto mt-[8vh] shadow">
+        <!-- Notch -->
+        <div class="absolute top-3 w-[100px] h-[30px] bg-black rounded-full border border-gray-900 shadow-md"></div>
+
+        <!-- Screen -->
+        <div class="w-[280px] h-[580px] bg-gray-200 rounded-[45px] overflow-hidden flex flex-col items-center p-4 relative justify-center">
+            <div class="absolute top-[-10px] w-[100px] h-[30px] bg-black rounded-full border border-gray-900 shadow-md"></div>
+
+            <!-- File Input Bubble -->
+            <div class="mt-4 w-full flex justify-center">
+                <label class="bg-blue-500 text-white px-4 py-2 rounded-lg cursor-pointer">
+                    Choose File
+                    <input type="file" id="fileInput" class="hidden" />
+                </label>
+            </div>
+
+            <!-- Send Button -->
+            <button onclick="sendFile()" class="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg">Send File</button>
+
+            <!-- Received Files Container -->
+            <div id="receivedFiles" class="w-full flex flex-col items-center mt-2 space-y-2">
+                <!-- Received file bubbles will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
